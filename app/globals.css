@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Updated to sophisticated purple and neutral palette for modern high-end look */
+  /* Layerbase Theme - Professional purple and neutral palette */
   --background: oklch(1 0 0); /* Pure white */
   --foreground: oklch(0.35 0.02 258); /* Sophisticated dark gray */
   --card: oklch(0.97 0.005 258); /* Light neutral gray */
@@ -77,8 +77,8 @@
 }
 
 @theme inline {
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -123,5 +123,8 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+  html {
+    scroll-behavior: smooth;
   }
 }

@@ -1,30 +1,91 @@
-# Layerbase web development
+# Layerbase
 
-*Automatically synced with your [v0.app](https://v0.app) deployments*
+**Software Engineering & Consulting**
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/efficientapp/v0-modern-color-scheme)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/projects/IQM2TPh6kgL)
+We specialize in crafting high-performance web applications that scale with your business.
 
-## Overview
+## Tech Stack
 
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
+- **Framework**: Next.js 15.5.2
+- **React**: 19.0.0
+- **TypeScript**: 5.x
+- **Styling**: Tailwind CSS 4.1.9
+- **UI Components**: shadcn/ui
+- **Fonts**: Inter (sans-serif) & JetBrains Mono (monospace)
+- **Package Manager**: pnpm
+
+## Getting Started
+
+1. **Install dependencies**:
+   ```bash
+   pnpm install
+   ```
+
+2. **Run development server**:
+   ```bash
+   pnpm dev
+   ```
+
+3. **Build for production**:
+   ```bash
+   pnpm build
+   ```
+
+## Adding UI Components with shadcn/ui
+
+This project is configured with shadcn/ui for modern, accessible components.
+
+### Add a new component:
+```bash
+npx shadcn@latest add [component-name]
+```
+
+### Popular components:
+```bash
+# Essential components
+npx shadcn@latest add button
+npx shadcn@latest add input
+npx shadcn@latest add card
+npx shadcn@latest add dialog
+
+# Navigation
+npx shadcn@latest add navigation-menu
+npx shadcn@latest add dropdown-menu
+
+# Forms
+npx shadcn@latest add form
+npx shadcn@latest add select
+npx shadcn@latest add checkbox
+
+# Data display
+npx shadcn@latest add table
+npx shadcn@latest add badge
+npx shadcn@latest add avatar
+```
+
+### Browse all components:
+Visit [ui.shadcn.com](https://ui.shadcn.com/docs/components) to see all available components.
+
+## Project Structure
+
+```
+├── app/                 # Next.js App Router
+│   ├── globals.css     # Global styles & CSS variables
+│   ├── layout.tsx      # Root layout with fonts
+│   └── page.tsx        # Home page
+├── components/         # React components
+│   └── ui/            # shadcn/ui components
+├── lib/               # Utility functions
+│   └── utils.ts       # cn() helper for Tailwind
+└── components.json    # shadcn/ui configuration
+```
+
+## Development
+
+- **Linting**: `pnpm lint`
+- **Type checking**: Built into Next.js dev server
+- **Hot reload**: Automatic in development mode
 
 ## Deployment
 
-Your project is live at:
-
-**[https://vercel.com/efficientapp/v0-modern-color-scheme](https://vercel.com/efficientapp/v0-modern-color-scheme)**
-
-## Build your app
-
-Continue building your app on:
-
-**[https://v0.app/chat/projects/IQM2TPh6kgL](https://v0.app/chat/projects/IQM2TPh6kgL)**
-
-## How It Works
-
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+Deploy easily to Vercel, Netlify, or any platform that supports Next.js.
