@@ -92,7 +92,7 @@ export default function HomePage() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 px-4 bg-muted/30">
+      <section id="services" className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -104,7 +104,7 @@ export default function HomePage() {
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="border-border hover:shadow-lg transition-shadow">
+            <Card className="border-border hover:shadow-lg transition-shadow bg-card">
               <CardHeader>
                 <Globe className="w-12 h-12 text-primary mb-4" />
                 <CardTitle>Full-Stack Development</CardTitle>
@@ -114,7 +114,7 @@ export default function HomePage() {
                 </CardDescription>
               </CardHeader>
             </Card>
-            <Card className="border-border hover:shadow-lg transition-shadow">
+            <Card className="border-border hover:shadow-lg transition-shadow bg-card">
               <CardHeader>
                 <Smartphone className="w-12 h-12 text-primary mb-4" />
                 <CardTitle>Responsive Design</CardTitle>
@@ -124,7 +124,7 @@ export default function HomePage() {
                 </CardDescription>
               </CardHeader>
             </Card>
-            <Card className="border-border hover:shadow-lg transition-shadow">
+            <Card className="border-border hover:shadow-lg transition-shadow bg-card">
               <CardHeader>
                 <Database className="w-12 h-12 text-primary mb-4" />
                 <CardTitle>Database Architecture</CardTitle>
@@ -134,7 +134,7 @@ export default function HomePage() {
                 </CardDescription>
               </CardHeader>
             </Card>
-            <Card className="border-border hover:shadow-lg transition-shadow">
+            <Card className="border-border hover:shadow-lg transition-shadow bg-card">
               <CardHeader>
                 <Shield className="w-12 h-12 text-primary mb-4" />
                 <CardTitle>Security & Compliance</CardTitle>
@@ -144,7 +144,7 @@ export default function HomePage() {
                 </CardDescription>
               </CardHeader>
             </Card>
-            <Card className="border-border hover:shadow-lg transition-shadow">
+            <Card className="border-border hover:shadow-lg transition-shadow bg-card">
               <CardHeader>
                 <Zap className="w-12 h-12 text-primary mb-4" />
                 <CardTitle>Performance Optimization</CardTitle>
@@ -154,7 +154,7 @@ export default function HomePage() {
                 </CardDescription>
               </CardHeader>
             </Card>
-            <Card className="border-border hover:shadow-lg transition-shadow">
+            <Card className="border-border hover:shadow-lg transition-shadow bg-card">
               <CardHeader>
                 <Code className="w-12 h-12 text-primary mb-4" />
                 <CardTitle>Technical Consulting</CardTitle>
@@ -183,167 +183,167 @@ export default function HomePage() {
           <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-8">
             {/* Frontend Frameworks */}
             <div className="flex flex-col items-center group">
-              <div className="w-16 h-16 flex items-center justify-center rounded-lg bg-muted/50 group-hover:bg-primary/10 transition-colors">
-                <TechIcons.NextJS className="w-10 h-10 text-foreground group-hover:text-primary transition-colors" />
+              <div className="w-16 h-16 flex items-center justify-center rounded-lg bg-muted border border-border transition-colors">
+                <TechIcons.NextJS className="w-10 h-10 text-muted-foreground group-hover:text-primary transition-colors" />
               </div>
               <span className="text-sm text-muted-foreground mt-2 text-center">Next.js</span>
             </div>
             
             <div className="flex flex-col items-center group">
-              <div className="w-16 h-16 flex items-center justify-center rounded-lg bg-muted/50 group-hover:bg-primary/10 transition-colors">
-                <TechIcons.React className="w-10 h-10 text-foreground group-hover:text-primary transition-colors" />
+              <div className="w-16 h-16 flex items-center justify-center rounded-lg bg-muted border border-border transition-colors">
+                <TechIcons.React className="w-10 h-10 text-muted-foreground group-hover:text-primary transition-colors" />
               </div>
               <span className="text-sm text-muted-foreground mt-2 text-center">React</span>
             </div>
             
             <div className="flex flex-col items-center group">
-              <div className="w-16 h-16 flex items-center justify-center rounded-lg bg-muted/50 group-hover:bg-primary/10 transition-colors">
-                <TechIcons.Vue className="w-10 h-10 text-foreground group-hover:text-primary transition-colors" />
+              <div className="w-16 h-16 flex items-center justify-center rounded-lg bg-muted border border-border transition-colors">
+                <TechIcons.Vue className="w-10 h-10 text-muted-foreground group-hover:text-primary transition-colors" />
               </div>
               <span className="text-sm text-muted-foreground mt-2 text-center">Vue.js</span>
             </div>
             
             <div className="flex flex-col items-center group">
-              <div className="w-16 h-16 flex items-center justify-center rounded-lg bg-muted/50 group-hover:bg-primary/10 transition-colors">
-                <TechIcons.Nuxt className="w-10 h-10 text-foreground group-hover:text-primary transition-colors" />
+              <div className="w-16 h-16 flex items-center justify-center rounded-lg bg-muted border border-border transition-colors">
+                <TechIcons.Nuxt className="w-10 h-10 text-muted-foreground group-hover:text-primary transition-colors" />
               </div>
               <span className="text-sm text-muted-foreground mt-2 text-center">Nuxt.js</span>
             </div>
             
             <div className="flex flex-col items-center group">
-              <div className="w-16 h-16 flex items-center justify-center rounded-lg bg-muted/50 group-hover:bg-primary/10 transition-colors">
-                <TechIcons.TypeScript className="w-10 h-10 text-foreground group-hover:text-primary transition-colors" />
+              <div className="w-16 h-16 flex items-center justify-center rounded-lg bg-muted border border-border transition-colors">
+                <TechIcons.TypeScript className="w-10 h-10 text-muted-foreground group-hover:text-primary transition-colors" />
               </div>
               <span className="text-sm text-muted-foreground mt-2 text-center">TypeScript</span>
             </div>
             
             <div className="flex flex-col items-center group">
-              <div className="w-16 h-16 flex items-center justify-center rounded-lg bg-muted/50 group-hover:bg-primary/10 transition-colors">
-                <TechIcons.TailwindCSS className="w-10 h-10 text-foreground group-hover:text-primary transition-colors" />
+              <div className="w-16 h-16 flex items-center justify-center rounded-lg bg-muted border border-border transition-colors">
+                <TechIcons.TailwindCSS className="w-10 h-10 text-muted-foreground group-hover:text-primary transition-colors" />
               </div>
               <span className="text-sm text-muted-foreground mt-2 text-center">Tailwind</span>
             </div>
             
             {/* Backend & Languages */}
             <div className="flex flex-col items-center group">
-              <div className="w-16 h-16 flex items-center justify-center rounded-lg bg-muted/50 group-hover:bg-primary/10 transition-colors">
-                <TechIcons.NodeJS className="w-10 h-10 text-foreground group-hover:text-primary transition-colors" />
+              <div className="w-16 h-16 flex items-center justify-center rounded-lg bg-muted border border-border transition-colors">
+                <TechIcons.NodeJS className="w-10 h-10 text-muted-foreground group-hover:text-primary transition-colors" />
               </div>
               <span className="text-sm text-muted-foreground mt-2 text-center">Node.js</span>
             </div>
             
             <div className="flex flex-col items-center group">
-              <div className="w-16 h-16 flex items-center justify-center rounded-lg bg-muted/50 group-hover:bg-primary/10 transition-colors">
-                <TechIcons.Go className="w-10 h-10 text-foreground group-hover:text-primary transition-colors" />
+              <div className="w-16 h-16 flex items-center justify-center rounded-lg bg-muted border border-border transition-colors">
+                <TechIcons.Go className="w-10 h-10 text-muted-foreground group-hover:text-primary transition-colors" />
               </div>
               <span className="text-sm text-muted-foreground mt-2 text-center">Go</span>
             </div>
             
             {/* Databases */}
             <div className="flex flex-col items-center group">
-              <div className="w-16 h-16 flex items-center justify-center rounded-lg bg-muted/50 group-hover:bg-primary/10 transition-colors">
-                <TechIcons.PostgreSQL className="w-10 h-10 text-foreground group-hover:text-primary transition-colors" />
+              <div className="w-16 h-16 flex items-center justify-center rounded-lg bg-muted border border-border transition-colors">
+                <TechIcons.PostgreSQL className="w-10 h-10 text-muted-foreground group-hover:text-primary transition-colors" />
               </div>
               <span className="text-sm text-muted-foreground mt-2 text-center">PostgreSQL</span>
             </div>
             
             <div className="flex flex-col items-center group">
-              <div className="w-16 h-16 flex items-center justify-center rounded-lg bg-muted/50 group-hover:bg-primary/10 transition-colors">
-                <TechIcons.MongoDB className="w-10 h-10 text-foreground group-hover:text-primary transition-colors" />
+              <div className="w-16 h-16 flex items-center justify-center rounded-lg bg-muted border border-border transition-colors">
+                <TechIcons.MongoDB className="w-10 h-10 text-muted-foreground group-hover:text-primary transition-colors" />
               </div>
               <span className="text-sm text-muted-foreground mt-2 text-center">MongoDB</span>
             </div>
             
             <div className="flex flex-col items-center group">
-              <div className="w-16 h-16 flex items-center justify-center rounded-lg bg-muted/50 group-hover:bg-primary/10 transition-colors">
-                <TechIcons.Redis className="w-10 h-10 text-foreground group-hover:text-primary transition-colors" />
+              <div className="w-16 h-16 flex items-center justify-center rounded-lg bg-muted border border-border transition-colors">
+                <TechIcons.Redis className="w-10 h-10 text-muted-foreground group-hover:text-primary transition-colors" />
               </div>
               <span className="text-sm text-muted-foreground mt-2 text-center">Redis</span>
             </div>
             
             <div className="flex flex-col items-center group">
-              <div className="w-16 h-16 flex items-center justify-center rounded-lg bg-muted/50 group-hover:bg-primary/10 transition-colors">
-                <TechIcons.Prisma className="w-10 h-10 text-foreground group-hover:text-primary transition-colors" />
+              <div className="w-16 h-16 flex items-center justify-center rounded-lg bg-muted border border-border transition-colors">
+                <TechIcons.Prisma className="w-10 h-10 text-muted-foreground group-hover:text-primary transition-colors" />
               </div>
               <span className="text-sm text-muted-foreground mt-2 text-center">Prisma</span>
             </div>
             
             <div className="flex flex-col items-center group">
-              <div className="w-16 h-16 flex items-center justify-center rounded-lg bg-muted/50 group-hover:bg-primary/10 transition-colors">
-                <TechIcons.Supabase className="w-10 h-10 text-foreground group-hover:text-primary transition-colors" />
+              <div className="w-16 h-16 flex items-center justify-center rounded-lg bg-muted border border-border transition-colors">
+                <TechIcons.Supabase className="w-10 h-10 text-muted-foreground group-hover:text-primary transition-colors" />
               </div>
               <span className="text-sm text-muted-foreground mt-2 text-center">Supabase</span>
             </div>
             
             {/* Cloud & Hosting */}
             <div className="flex flex-col items-center group">
-              <div className="w-16 h-16 flex items-center justify-center rounded-lg bg-muted/50 group-hover:bg-primary/10 transition-colors">
-                <TechIcons.Vercel className="w-10 h-10 text-foreground group-hover:text-primary transition-colors" />
+              <div className="w-16 h-16 flex items-center justify-center rounded-lg bg-muted border border-border transition-colors">
+                <TechIcons.Vercel className="w-10 h-10 text-muted-foreground group-hover:text-primary transition-colors" />
               </div>
               <span className="text-sm text-muted-foreground mt-2 text-center">Vercel</span>
             </div>
             
             <div className="flex flex-col items-center group">
-              <div className="w-16 h-16 flex items-center justify-center rounded-lg bg-muted/50 group-hover:bg-primary/10 transition-colors">
-                <TechIcons.AWS className="w-10 h-10 text-foreground group-hover:text-primary transition-colors" />
+              <div className="w-16 h-16 flex items-center justify-center rounded-lg bg-muted border border-border transition-colors">
+                <TechIcons.AWS className="w-10 h-10 text-muted-foreground group-hover:text-primary transition-colors" />
               </div>
               <span className="text-sm text-muted-foreground mt-2 text-center">AWS</span>
             </div>
             
             <div className="flex flex-col items-center group">
-              <div className="w-16 h-16 flex items-center justify-center rounded-lg bg-muted/50 group-hover:bg-primary/10 transition-colors">
-                <TechIcons.GoogleCloud className="w-10 h-10 text-foreground group-hover:text-primary transition-colors" />
+              <div className="w-16 h-16 flex items-center justify-center rounded-lg bg-muted border border-border transition-colors">
+                <TechIcons.GoogleCloud className="w-10 h-10 text-muted-foreground group-hover:text-primary transition-colors" />
               </div>
               <span className="text-sm text-muted-foreground mt-2 text-center">Google Cloud</span>
             </div>
             
             {/* DevOps & Tools */}
             <div className="flex flex-col items-center group">
-              <div className="w-16 h-16 flex items-center justify-center rounded-lg bg-muted/50 group-hover:bg-primary/10 transition-colors">
-                <TechIcons.Docker className="w-10 h-10 text-foreground group-hover:text-primary transition-colors" />
+              <div className="w-16 h-16 flex items-center justify-center rounded-lg bg-muted border border-border transition-colors">
+                <TechIcons.Docker className="w-10 h-10 text-muted-foreground group-hover:text-primary transition-colors" />
               </div>
               <span className="text-sm text-muted-foreground mt-2 text-center">Docker</span>
             </div>
             
             <div className="flex flex-col items-center group">
-              <div className="w-16 h-16 flex items-center justify-center rounded-lg bg-muted/50 group-hover:bg-primary/10 transition-colors">
-                <TechIcons.GitHub className="w-10 h-10 text-foreground group-hover:text-primary transition-colors" />
+              <div className="w-16 h-16 flex items-center justify-center rounded-lg bg-muted border border-border transition-colors">
+                <TechIcons.GitHub className="w-10 h-10 text-muted-foreground group-hover:text-primary transition-colors" />
               </div>
               <span className="text-sm text-muted-foreground mt-2 text-center">GitHub</span>
             </div>
             
             <div className="flex flex-col items-center group">
-              <div className="w-16 h-16 flex items-center justify-center rounded-lg bg-muted/50 group-hover:bg-primary/10 transition-colors">
-                <TechIcons.Figma className="w-10 h-10 text-foreground group-hover:text-primary transition-colors" />
+              <div className="w-16 h-16 flex items-center justify-center rounded-lg bg-muted border border-border transition-colors">
+                <TechIcons.Figma className="w-10 h-10 text-muted-foreground group-hover:text-primary transition-colors" />
               </div>
               <span className="text-sm text-muted-foreground mt-2 text-center">Figma</span>
             </div>
             
             {/* Additional Services */}
             <div className="flex flex-col items-center group">
-              <div className="w-16 h-16 flex items-center justify-center rounded-lg bg-muted/50 group-hover:bg-primary/10 transition-colors">
-                <TechIcons.Stripe className="w-10 h-10 text-foreground group-hover:text-primary transition-colors" />
+              <div className="w-16 h-16 flex items-center justify-center rounded-lg bg-muted border border-border transition-colors">
+                <TechIcons.Stripe className="w-10 h-10 text-muted-foreground group-hover:text-primary transition-colors" />
               </div>
               <span className="text-sm text-muted-foreground mt-2 text-center">Stripe</span>
             </div>
             
             <div className="flex flex-col items-center group">
-              <div className="w-16 h-16 flex items-center justify-center rounded-lg bg-muted/50 group-hover:bg-primary/10 transition-colors">
-                <TechIcons.Auth0 className="w-10 h-10 text-foreground group-hover:text-primary transition-colors" />
+              <div className="w-16 h-16 flex items-center justify-center rounded-lg bg-muted border border-border transition-colors">
+                <TechIcons.Drizzle className="w-10 h-10 text-muted-foreground group-hover:text-primary transition-colors" />
               </div>
-              <span className="text-sm text-muted-foreground mt-2 text-center">Auth0</span>
+              <span className="text-sm text-muted-foreground mt-2 text-center">Drizzle</span>
             </div>
             
             <div className="flex flex-col items-center group">
-              <div className="w-16 h-16 flex items-center justify-center rounded-lg bg-muted/50 group-hover:bg-primary/10 transition-colors">
-                <TechIcons.Firebase className="w-10 h-10 text-foreground group-hover:text-primary transition-colors" />
+              <div className="w-16 h-16 flex items-center justify-center rounded-lg bg-muted border border-border transition-colors">
+                <TechIcons.Firebase className="w-10 h-10 text-muted-foreground group-hover:text-primary transition-colors" />
               </div>
               <span className="text-sm text-muted-foreground mt-2 text-center">Firebase</span>
             </div>
             
             <div className="flex flex-col items-center group">
-              <div className="w-16 h-16 flex items-center justify-center rounded-lg bg-muted/50 group-hover:bg-primary/10 transition-colors">
-                <TechIcons.Cloudflare className="w-10 h-10 text-foreground group-hover:text-primary transition-colors" />
+              <div className="w-16 h-16 flex items-center justify-center rounded-lg bg-muted border border-border transition-colors">
+                <TechIcons.Cloudflare className="w-10 h-10 text-muted-foreground group-hover:text-primary transition-colors" />
               </div>
               <span className="text-sm text-muted-foreground mt-2 text-center">Cloudflare</span>
             </div>
@@ -399,7 +399,7 @@ export default function HomePage() {
                 </li>
               </ul>
             </div>
-            <div className="bg-muted/50 rounded-lg p-8">
+            <div className="bg-accent rounded-lg p-8 border border-border">
               <div className="space-y-6">
                 <div>
                   <h3 className="text-2xl font-bold text-primary mb-2">500+</h3>

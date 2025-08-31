@@ -4,26 +4,26 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Layerbase Theme - Professional purple and neutral palette */
-  --background: oklch(1 0 0); /* Pure white */
-  --foreground: oklch(0.35 0.02 258); /* Sophisticated dark gray */
-  --card: oklch(0.97 0.005 258); /* Light neutral gray */
-  --card-foreground: oklch(0.25 0.02 258); /* Card text */
+  /* Layerbase Theme - Light and welcoming professional palette */
+  --background: oklch(1 0 0); /* Pure white background */
+  --foreground: oklch(0.45 0.01 258); /* Softer medium gray text */
+  --card: oklch(1 0 0); /* Pure white cards */
+  --card-foreground: oklch(0.4 0.01 258); /* Lighter card text */
   --popover: oklch(1 0 0); /* White popover */
-  --popover-foreground: oklch(0.25 0.02 258); /* Popover text */
-  --primary: oklch(0.45 0.15 285); /* Rich purple primary */
+  --popover-foreground: oklch(0.4 0.01 258); /* Lighter popover text */
+  --primary: oklch(0.55 0.1 285); /* Lighter, friendlier purple */
   --primary-foreground: oklch(1 0 0); /* White text on primary */
-  --secondary: oklch(0.55 0.15 285); /* Brighter purple secondary */
-  --secondary-foreground: oklch(1 0 0); /* White text on secondary */
-  --muted: oklch(0.97 0.005 258); /* Muted background */
-  --muted-foreground: oklch(0.45 0.02 258); /* Muted text */
-  --accent: oklch(0.55 0.15 285); /* Purple accent */
-  --accent-foreground: oklch(1 0 0); /* White text on accent */
-  --destructive: oklch(0.55 0.22 25); /* Red for destructive actions */
+  --secondary: oklch(0.98 0.005 285); /* Nearly white with hint of purple */
+  --secondary-foreground: oklch(0.45 0.06 285); /* Soft purple text */
+  --muted: oklch(0.98 0.002 258); /* Very light muted background */
+  --muted-foreground: oklch(0.6 0.01 258); /* Lighter muted text */
+  --accent: oklch(0.97 0.008 285); /* Barely tinted accent */
+  --accent-foreground: oklch(0.5 0.08 285); /* Soft purple accent text */
+  --destructive: oklch(0.6 0.18 25); /* Softer red */
   --destructive-foreground: oklch(1 0 0); /* White text on destructive */
-  --border: oklch(0.92 0.005 258); /* Subtle borders */
-  --input: oklch(0.97 0.005 258); /* Input background */
-  --ring: oklch(0.45 0.15 285 / 0.3); /* Purple focus ring */
+  --border: oklch(0.94 0.005 258); /* Very light borders */
+  --input: oklch(0.99 0.002 258); /* Nearly white input background */
+  --ring: oklch(0.55 0.1 285 / 0.2); /* Softer focus ring */
   --chart-1: oklch(0.45 0.15 285); /* Purple chart color */
   --chart-2: oklch(0.55 0.15 285); /* Lighter purple */
   --chart-3: oklch(0.35 0.12 285); /* Darker purple */
