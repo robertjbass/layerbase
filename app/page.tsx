@@ -1,0 +1,245 @@
+import { Button } from "@/components/ui/button"
+import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { ArrowRight, Code, Globe, Smartphone, Database, Shield, Zap } from "lucide-react"
+
+export default function HomePage() {
+  return (
+    <div className="min-h-screen bg-background">
+      {/* Header */}
+      <header className="border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
+        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+          <div className="flex items-center space-x-2">
+            <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+              <Code className="w-5 h-5 text-primary-foreground" />
+            </div>
+            <span className="text-xl font-bold text-foreground">Layerbase</span>
+          </div>
+          <nav className="hidden md:flex items-center space-x-8">
+            <a href="#services" className="text-muted-foreground hover:text-foreground transition-colors">
+              Services
+            </a>
+            <a href="#about" className="text-muted-foreground hover:text-foreground transition-colors">
+              About
+            </a>
+            <a href="#contact" className="text-muted-foreground hover:text-foreground transition-colors">
+              Contact
+            </a>
+          </nav>
+          <Button>Get Started</Button>
+        </div>
+      </header>
+
+      {/* Hero Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-4xl text-center">
+          <Badge variant="secondary" className="mb-6">
+            Software Engineering & Consulting
+          </Badge>
+          <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 text-balance">
+            Build Exceptional Web Applications with <span className="text-primary">Layerbase</span>
+          </h1>
+          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto text-pretty">
+            We specialize in crafting high-performance web applications that scale with your business. From concept to
+            deployment, we deliver solutions that drive results.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" className="text-lg px-8">
+              Start Your Project
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Button>
+            <Button variant="outline" size="lg" className="text-lg px-8 bg-transparent">
+              View Our Work
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section id="services" className="py-20 px-4 bg-muted/30">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Expertise</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Comprehensive web development services tailored to your business needs
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card className="border-border hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <Globe className="w-12 h-12 text-primary mb-4" />
+                <CardTitle>Full-Stack Development</CardTitle>
+                <CardDescription>
+                  End-to-end web application development using modern frameworks and technologies
+                </CardDescription>
+              </CardHeader>
+            </Card>
+            <Card className="border-border hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <Smartphone className="w-12 h-12 text-primary mb-4" />
+                <CardTitle>Responsive Design</CardTitle>
+                <CardDescription>
+                  Mobile-first designs that provide exceptional user experiences across all devices
+                </CardDescription>
+              </CardHeader>
+            </Card>
+            <Card className="border-border hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <Database className="w-12 h-12 text-primary mb-4" />
+                <CardTitle>Database Architecture</CardTitle>
+                <CardDescription>
+                  Scalable database design and optimization for high-performance applications
+                </CardDescription>
+              </CardHeader>
+            </Card>
+            <Card className="border-border hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <Shield className="w-12 h-12 text-primary mb-4" />
+                <CardTitle>Security & Compliance</CardTitle>
+                <CardDescription>
+                  Enterprise-grade security implementation and compliance with industry standards
+                </CardDescription>
+              </CardHeader>
+            </Card>
+            <Card className="border-border hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <Zap className="w-12 h-12 text-primary mb-4" />
+                <CardTitle>Performance Optimization</CardTitle>
+                <CardDescription>
+                  Speed optimization and performance tuning for lightning-fast applications
+                </CardDescription>
+              </CardHeader>
+            </Card>
+            <Card className="border-border hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <Code className="w-12 h-12 text-primary mb-4" />
+                <CardTitle>Technical Consulting</CardTitle>
+                <CardDescription>
+                  Strategic technology guidance and architecture planning for your projects
+                </CardDescription>
+              </CardHeader>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="py-20 px-4">
+        <div className="container mx-auto max-w-4xl">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">Why Choose Layerbase?</h2>
+              <p className="text-lg text-muted-foreground mb-6">
+                With years of experience in software engineering and web development, we bring technical excellence and
+                business acumen to every project.
+              </p>
+              <ul className="space-y-4">
+                <li className="flex items-start space-x-3">
+                  <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div className="w-2 h-2 bg-primary-foreground rounded-full" />
+                  </div>
+                  <span className="text-foreground">Expert team with proven track record</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div className="w-2 h-2 bg-primary-foreground rounded-full" />
+                  </div>
+                  <span className="text-foreground">Agile development methodology</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div className="w-2 h-2 bg-primary-foreground rounded-full" />
+                  </div>
+                  <span className="text-foreground">24/7 support and maintenance</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div className="w-2 h-2 bg-primary-foreground rounded-full" />
+                  </div>
+                  <span className="text-foreground">Scalable and future-proof solutions</span>
+                </li>
+              </ul>
+            </div>
+            <div className="bg-muted/50 rounded-lg p-8">
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-2xl font-bold text-primary mb-2">500+</h3>
+                  <p className="text-muted-foreground">Projects Delivered</p>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-primary mb-2">98%</h3>
+                  <p className="text-muted-foreground">Client Satisfaction</p>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-primary mb-2">5+</h3>
+                  <p className="text-muted-foreground">Years Experience</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 bg-primary">
+        <div className="container mx-auto max-w-4xl text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
+            Ready to Build Something Amazing?
+          </h2>
+          <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
+            Let's discuss your project and turn your vision into a powerful web application
+          </p>
+          <Button size="lg" variant="secondary" className="text-lg px-8">
+            Get In Touch
+            <ArrowRight className="ml-2 w-5 h-5" />
+          </Button>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-20 px-4">
+        <div className="container mx-auto max-w-4xl text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">Contact Us</h2>
+          <p className="text-xl text-muted-foreground mb-12">
+            Ready to start your next project? We'd love to hear from you.
+          </p>
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="border-border">
+              <CardHeader>
+                <CardTitle>Email</CardTitle>
+                <CardDescription>hello@layerbase.com</CardDescription>
+              </CardHeader>
+            </Card>
+            <Card className="border-border">
+              <CardHeader>
+                <CardTitle>Phone</CardTitle>
+                <CardDescription>+1 (555) 123-4567</CardDescription>
+              </CardHeader>
+            </Card>
+            <Card className="border-border">
+              <CardHeader>
+                <CardTitle>Location</CardTitle>
+                <CardDescription>Remote & On-site</CardDescription>
+              </CardHeader>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="border-t border-border py-12 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="flex items-center space-x-2 mb-4 md:mb-0">
+              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+                <Code className="w-5 h-5 text-primary-foreground" />
+              </div>
+              <span className="text-xl font-bold text-foreground">Layerbase, LLC</span>
+            </div>
+            <p className="text-muted-foreground">© 2024 Layerbase, LLC. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  )
+}
