@@ -28,6 +28,7 @@ import {
   SiVuedotjs,
   SiNuxtdotjs,
   SiGo,
+  SiSqlite,
 } from "react-icons/si";
 
 // Export all tech icons with consistent naming
@@ -60,6 +61,7 @@ export const TechIcons = {
   Vue: SiVuedotjs,
   Nuxt: SiNuxtdotjs,
   Go: SiGo,
+  SQLite: SiSqlite,
 } as const;
 
 // Individual exports for convenience
@@ -92,4 +94,5 @@ export {
   SiVuedotjs as VueIcon,
   SiNuxtdotjs as NuxtIcon,
   SiGo as GoIcon,
+  SiSqlite as SQLiteIcon,
 };

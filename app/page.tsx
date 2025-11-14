@@ -15,8 +15,9 @@ import {
   Shield,
   Zap,
 } from "lucide-react";
-import { contactInfo } from "@/lib/data";
+import { contactInfo, projects } from "@/lib/data";
 import { TechIcons } from "@/components/icons/tech-icons";
+import Link from "next/link";
 
 export default function HomePage() {
   return (
@@ -56,7 +57,6 @@ export default function HomePage() {
               Contact
             </a>
           </nav>
-          <Button>Get Started</Button>
         </div>
       </header>
 
@@ -76,16 +76,21 @@ export default function HomePage() {
             solutions that drive results.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="text-lg px-8">
-              Start Your Project
-              <ArrowRight className="ml-2 w-5 h-5" />
+            <Button size="lg" className="text-lg px-8" asChild>
+              <a href="#contact">
+                Start Your Project
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </a>
             </Button>
             <Button
               variant="outline"
               size="lg"
               className="text-lg px-8 bg-transparent"
+              asChild
             >
-              View Our Work
+              <a href="#projects">
+                View Our Work
+              </a>
             </Button>
           </div>
         </div>
@@ -267,6 +272,13 @@ export default function HomePage() {
               </div>
               <span className="text-sm text-muted-foreground mt-2 text-center">Prisma</span>
             </div>
+
+            <div className="flex flex-col items-center group">
+              <div className="w-16 h-16 flex items-center justify-center rounded-lg bg-muted border border-border transition-colors">
+                <TechIcons.SQLite className="w-10 h-10 text-muted-foreground group-hover:text-primary transition-colors" />
+              </div>
+              <span className="text-sm text-muted-foreground mt-2 text-center">SQLite</span>
+            </div>
             
             <div className="flex flex-col items-center group">
               <div className="w-16 h-16 flex items-center justify-center rounded-lg bg-muted border border-border transition-colors">
@@ -351,6 +363,60 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Projects Section */}
+      <section id="projects" className="py-20 px-4 bg-muted/30">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Our Work
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              A selection of projects showcasing our technical expertise and innovative solutions
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {projects.map((project, index) => (
+              <Card key={index} className="border-border hover:shadow-lg transition-all hover:scale-105 bg-card group">
+                <CardHeader>
+                  <div className="flex items-start justify-between mb-4">
+                    <Badge variant="secondary" className="mb-2">
+                      {project.category}
+                    </Badge>
+                    {project.year && (
+                      <span className="text-sm text-muted-foreground">{project.year}</span>
+                    )}
+                  </div>
+                  <CardTitle className="text-xl group-hover:text-primary transition-colors">
+                    {project.link ? (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:underline"
+                      >
+                        {project.name}
+                      </a>
+                    ) : (
+                      project.name
+                    )}
+                  </CardTitle>
+                  <CardDescription className="min-h-[3rem]">
+                    {project.description}
+                  </CardDescription>
+                  <div className="flex flex-wrap gap-2 mt-4">
+                    {project.technologies.map((tech, techIndex) => (
+                      <Badge key={techIndex} variant="outline" className="text-xs">
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
+                </CardHeader>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* About Section */}
       <section id="about" className="py-20 px-4">
         <div className="container mx-auto max-w-4xl">
@@ -399,19 +465,19 @@ export default function HomePage() {
                 </li>
               </ul>
             </div>
-            <div className="bg-accent rounded-lg p-8 border border-border">
-              <div className="space-y-6">
+            <div className="bg-primary/10 rounded-lg p-8 border-2 border-primary/20">
+              <div className="space-y-8">
                 <div>
-                  <h3 className="text-2xl font-bold text-primary mb-2">500+</h3>
-                  <p className="text-muted-foreground">Projects Delivered</p>
+                  <h3 className="text-5xl font-bold text-primary mb-2">500+</h3>
+                  <p className="text-foreground font-medium">Projects Delivered</p>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-primary mb-2">98%</h3>
-                  <p className="text-muted-foreground">Client Satisfaction</p>
+                  <h3 className="text-5xl font-bold text-primary mb-2">98%</h3>
+                  <p className="text-foreground font-medium">Client Satisfaction</p>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-primary mb-2">5+</h3>
-                  <p className="text-muted-foreground">Years Experience</p>
+                  <h3 className="text-5xl font-bold text-primary mb-2">5+</h3>
+                  <p className="text-foreground font-medium">Years Experience</p>
                 </div>
               </div>
             </div>
