@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -57,7 +57,9 @@
   --accent: oklch(0.55 0.15 285); /* Purple accent */
   --accent-foreground: oklch(0.08 0.005 258); /* Dark text on accent */
   --destructive: oklch(0.45 0.18 25); /* Darker red for dark mode */
-  --destructive-foreground: oklch(0.95 0.005 258); /* Light text on destructive */
+  --destructive-foreground: oklch(
+    0.95 0.005 258
+  ); /* Light text on destructive */
   --border: oklch(0.18 0.02 258); /* Dark borders */
   --input: oklch(0.18 0.02 258); /* Dark input background */
   --ring: oklch(0.55 0.15 285 / 0.4); /* Brighter purple focus ring */

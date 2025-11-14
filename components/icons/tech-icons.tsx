@@ -29,7 +29,7 @@ import {
   SiNuxtdotjs,
   SiGo,
   SiSqlite,
-} from "react-icons/si";
+} from 'react-icons/si'
 
 // Export all tech icons with consistent naming
 export const TechIcons = {
@@ -62,7 +62,7 @@ export const TechIcons = {
   Nuxt: SiNuxtdotjs,
   Go: SiGo,
   SQLite: SiSqlite,
-} as const;
+} as const
 
 // Individual exports for convenience
 export {
@@ -95,4 +95,4 @@ export {
   SiNuxtdotjs as NuxtIcon,
   SiGo as GoIcon,
   SiSqlite as SQLiteIcon,
-};
+}

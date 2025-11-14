@@ -20,11 +20,13 @@ We specialize in crafting high-performance web applications that scale with your
 ## Getting Started
 
 1. **Install dependencies**:
+
    ```bash
    pnpm install
    ```
 
 2. **Run development server**:
+
    ```bash
    pnpm dev
    ```
@@ -39,11 +41,13 @@ We specialize in crafting high-performance web applications that scale with your
 This project is configured with shadcn/ui for modern, accessible components.
 
 ### Add a new component:
+
 ```bash
 npx shadcn@latest add [component-name]
 ```
 
 ### Popular components:
+
 ```bash
 # Essential components
 npx shadcn@latest add button
@@ -67,6 +71,7 @@ npx shadcn@latest add avatar
 ```
 
 ### Browse all components:
+
 Visit [ui.shadcn.com](https://ui.shadcn.com/docs/components) to see all available components.
 
 ## Project Structure
@@ -95,6 +100,7 @@ Visit [ui.shadcn.com](https://ui.shadcn.com/docs/components) to see all availabl
 ## Code Style
 
 This project uses Prettier with the following configuration:
+
 - No semicolons
 - Single quotes
 - 80 character line width
@@ -107,6 +113,7 @@ Run `pnpm format` before committing to ensure consistent code style.
 Deploy easily to Vercel, Netlify, or any platform that supports Next.js. This site uses Static Site Generation (SSG) for optimal performance.
 
 ### Build Output
+
 - All pages are pre-rendered at build time
 - Optimized with Turbopack for fast builds
 - No server-side rendering required
