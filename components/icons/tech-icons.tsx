@@ -28,7 +28,17 @@ import {
   SiVuedotjs,
   SiNuxtdotjs,
   SiGo,
-} from "react-icons/si";
+  SiSqlite,
+  SiPayloadcms,
+  SiMysql,
+  SiLinux,
+  SiMacos,
+  SiRust,
+  SiZig,
+  SiCplusplus,
+  SiSvelte,
+  SiElixir,
+} from 'react-icons/si'
 
 // Export all tech icons with consistent naming
 export const TechIcons = {
@@ -60,7 +70,17 @@ export const TechIcons = {
   Vue: SiVuedotjs,
   Nuxt: SiNuxtdotjs,
   Go: SiGo,
-} as const;
+  SQLite: SiSqlite,
+  PayloadCMS: SiPayloadcms,
+  MySQL: SiMysql,
+  Linux: SiLinux,
+  macOS: SiMacos,
+  Rust: SiRust,
+  Zig: SiZig,
+  CPlusPlus: SiCplusplus,
+  Svelte: SiSvelte,
+  Elixir: SiElixir,
+} as const
 
 // Individual exports for convenience
 export {
@@ -92,4 +112,14 @@ export {
   SiVuedotjs as VueIcon,
   SiNuxtdotjs as NuxtIcon,
   SiGo as GoIcon,
-};
+  SiSqlite as SQLiteIcon,
+  SiPayloadcms as PayloadCMSIcon,
+  SiMysql as MySQLIcon,
+  SiLinux as LinuxIcon,
+  SiMacos as macOSIcon,
+  SiRust as RustIcon,
+  SiZig as ZigIcon,
+  SiCplusplus as CPlusPlusIcon,
+  SiSvelte as SvelteIcon,
+  SiElixir as ElixirIcon,
+}

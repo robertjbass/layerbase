@@ -1,43 +1,43 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Layerbase Theme - Light and welcoming professional palette */
-  --background: oklch(1 0 0); /* Pure white background */
-  --foreground: oklch(0.45 0.01 258); /* Softer medium gray text */
+  /* Modern minimal aesthetic */
+  --background: oklch(0.99 0 0); /* Subtle off-white */
+  --foreground: oklch(0.2 0.01 258); /* Rich dark text */
   --card: oklch(1 0 0); /* Pure white cards */
-  --card-foreground: oklch(0.4 0.01 258); /* Lighter card text */
-  --popover: oklch(1 0 0); /* White popover */
-  --popover-foreground: oklch(0.4 0.01 258); /* Lighter popover text */
-  --primary: oklch(0.55 0.1 285); /* Lighter, friendlier purple */
-  --primary-foreground: oklch(1 0 0); /* White text on primary */
-  --secondary: oklch(0.98 0.005 285); /* Nearly white with hint of purple */
-  --secondary-foreground: oklch(0.45 0.06 285); /* Soft purple text */
-  --muted: oklch(0.98 0.002 258); /* Very light muted background */
-  --muted-foreground: oklch(0.6 0.01 258); /* Lighter muted text */
-  --accent: oklch(0.97 0.008 285); /* Barely tinted accent */
-  --accent-foreground: oklch(0.5 0.08 285); /* Soft purple accent text */
-  --destructive: oklch(0.6 0.18 25); /* Softer red */
-  --destructive-foreground: oklch(1 0 0); /* White text on destructive */
-  --border: oklch(0.94 0.005 258); /* Very light borders */
-  --input: oklch(0.99 0.002 258); /* Nearly white input background */
-  --ring: oklch(0.55 0.1 285 / 0.2); /* Softer focus ring */
-  --chart-1: oklch(0.45 0.15 285); /* Purple chart color */
-  --chart-2: oklch(0.55 0.15 285); /* Lighter purple */
-  --chart-3: oklch(0.35 0.12 285); /* Darker purple */
-  --chart-4: oklch(0.35 0.02 258); /* Dark gray */
-  --chart-5: oklch(0.65 0.18 285); /* Bright purple */
-  --radius: 0.5rem; /* Slightly reduced radius for modern look */
-  --sidebar: oklch(1 0 0); /* White sidebar */
-  --sidebar-foreground: oklch(0.25 0.02 258); /* Sidebar text */
-  --sidebar-primary: oklch(0.45 0.15 285); /* Purple sidebar primary */
-  --sidebar-primary-foreground: oklch(1 0 0); /* White text */
-  --sidebar-accent: oklch(0.55 0.15 285); /* Purple sidebar accent */
-  --sidebar-accent-foreground: oklch(1 0 0); /* White text */
-  --sidebar-border: oklch(0.92 0.005 258); /* Sidebar borders */
-  --sidebar-ring: oklch(0.45 0.15 285 / 0.3); /* Sidebar focus ring */
+  --card-foreground: oklch(0.25 0.01 258); /* Dark card text */
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.25 0.01 258);
+  --primary: oklch(0.35 0.08 258); /* Sophisticated dark blue-gray */
+  --primary-foreground: oklch(0.99 0 0); /* Off-white text */
+  --secondary: oklch(0.96 0.002 258); /* Very light gray */
+  --secondary-foreground: oklch(0.3 0.01 258); /* Dark text */
+  --muted: oklch(0.97 0.002 258); /* Subtle muted bg */
+  --muted-foreground: oklch(0.5 0.01 258); /* Medium gray text */
+  --accent: oklch(0.35 0.08 258); /* Matches primary for cohesion */
+  --accent-foreground: oklch(0.99 0 0);
+  --destructive: oklch(0.55 0.15 25);
+  --destructive-foreground: oklch(0.99 0 0);
+  --border: oklch(0.92 0.005 258); /* Subtle borders */
+  --input: oklch(0.99 0.002 258);
+  --ring: oklch(0.35 0.08 258 / 0.3);
+  --chart-1: oklch(0.35 0.08 258);
+  --chart-2: oklch(0.45 0.1 258);
+  --chart-3: oklch(0.55 0.12 258);
+  --chart-4: oklch(0.65 0.05 258);
+  --chart-5: oklch(0.75 0.03 258);
+  --radius: 0.75rem; /* Refined radius */
+  --sidebar: oklch(1 0 0);
+  --sidebar-foreground: oklch(0.25 0.02 258);
+  --sidebar-primary: oklch(0.35 0.08 258);
+  --sidebar-primary-foreground: oklch(0.99 0 0);
+  --sidebar-accent: oklch(0.45 0.1 258);
+  --sidebar-accent-foreground: oklch(0.99 0 0);
+  --sidebar-border: oklch(0.92 0.005 258);
+  --sidebar-ring: oklch(0.35 0.08 258 / 0.3);
 }
 
 .dark {
@@ -57,7 +57,9 @@
   --accent: oklch(0.55 0.15 285); /* Purple accent */
   --accent-foreground: oklch(0.08 0.005 258); /* Dark text on accent */
   --destructive: oklch(0.45 0.18 25); /* Darker red for dark mode */
-  --destructive-foreground: oklch(0.95 0.005 258); /* Light text on destructive */
+  --destructive-foreground: oklch(
+    0.95 0.005 258
+  ); /* Light text on destructive */
   --border: oklch(0.18 0.02 258); /* Dark borders */
   --input: oklch(0.18 0.02 258); /* Dark input background */
   --ring: oklch(0.55 0.15 285 / 0.4); /* Brighter purple focus ring */
@@ -123,6 +125,53 @@
   }
   body {
     @apply bg-background text-foreground;
+    background-image:
+      radial-gradient(
+        at 0% 0%,
+        oklch(0.35 0.08 258 / 0.03) 0px,
+        transparent 50%
+      ),
+      radial-gradient(
+        at 100% 0%,
+        oklch(0.35 0.08 258 / 0.02) 0px,
+        transparent 50%
+      ),
+      radial-gradient(
+        at 100% 100%,
+        oklch(0.35 0.08 258 / 0.03) 0px,
+        transparent 50%
+      ),
+      radial-gradient(
+        at 0% 100%,
+        oklch(0.35 0.08 258 / 0.02) 0px,
+        transparent 50%
+      );
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.015;
+    z-index: -1;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' /%3E%3C/svg%3E");
+  }
+  body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.02;
+    z-index: -1;
+    background-image:
+      linear-gradient(oklch(0.35 0.08 258 / 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, oklch(0.35 0.08 258 / 0.1) 1px, transparent 1px);
+    background-size: 100px 100px;
+    mask-image: radial-gradient(ellipse at center, transparent 20%, black 70%);
   }
   html {
     scroll-behavior: smooth;

@@ -19,12 +19,14 @@ import { TechIcons, NextJSIcon, VercelIcon } from "@/components/icons/tech-icons
 ## Available Icons
 
 ### Frontend Frameworks
+
 - `NextJS` - Next.js
 - `React` - React
 - `TypeScript` - TypeScript
 - `TailwindCSS` - Tailwind CSS
 
 ### Backend & Database
+
 - `NodeJS` - Node.js
 - `PostgreSQL` - PostgreSQL
 - `MongoDB` - MongoDB
@@ -33,6 +35,7 @@ import { TechIcons, NextJSIcon, VercelIcon } from "@/components/icons/tech-icons
 - `Supabase` - Supabase
 
 ### Cloud & Hosting
+
 - `Vercel` - Vercel
 - `AWS` - Amazon Web Services
 - `GoogleCloud` - Google Cloud Platform
@@ -41,12 +44,14 @@ import { TechIcons, NextJSIcon, VercelIcon } from "@/components/icons/tech-icons
 - `Cloudflare` - Cloudflare
 
 ### DevOps & Tools
+
 - `Docker` - Docker
 - `Kubernetes` - Kubernetes
 - `GitHub` - GitHub
 - `GitLab` - GitLab
 
 ### Services
+
 - `Stripe` - Stripe Payments
 - `Auth0` - Auth0 Authentication
 - `Firebase` - Firebase
@@ -56,12 +61,11 @@ import { TechIcons, NextJSIcon, VercelIcon } from "@/components/icons/tech-icons
 ## Styling
 
 All icons accept standard React props and can be styled with:
+
 - `className` for Tailwind classes
 - `size` prop for consistent sizing
 - `color` prop for color overrides
 
 ```tsx
-<TechIcons.NextJS 
-  className="w-12 h-12 text-primary hover:text-primary/80 transition-colors" 
-/>
+<TechIcons.NextJS className="w-12 h-12 text-primary hover:text-primary/80 transition-colors" />
 ```

@@ -1,0 +1,2 @@
+- [ ] Create Logos
+- [ ] Improve Theme and Background
