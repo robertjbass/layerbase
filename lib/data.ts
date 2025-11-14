@@ -38,7 +38,7 @@ export const projects = [
       'SaaS platform for accounts receivable automation. Winner of 2020 Pioneer startup program',
     technologies: ['TypeScript', 'React', 'Node.js', 'PostgreSQL'],
     category: 'FinTech',
-    year: '2019-2022',
+    link: undefined,
   },
   {
     name: 'PGP Encryption Tool',
@@ -72,4 +72,4 @@ export const projects = [
     link: 'https://github.com/robertjbass/reactx-state-management',
     category: 'Open Source',
   },
-] as const
+]

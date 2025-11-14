@@ -15,8 +15,13 @@ import {
   Shield,
   Zap,
   ExternalLink,
+  Mail,
+  Phone,
+  MapPin,
+  Github,
+  Linkedin,
 } from 'lucide-react'
-import { contactInfo, projects } from '@/lib/data'
+import { contactInfo, projects, socialLinks } from '@/lib/data'
 import { TechIcons } from '@/components/icons/tech-icons'
 
 export default function HomePage() {
@@ -65,7 +70,12 @@ export default function HomePage() {
       </header>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-24 px-6 lg:px-8">
+      <section className="pt-32 pb-24 px-6 lg:px-8 relative overflow-hidden">
+        {/* Animated gradient orbs */}
+        <div className="absolute inset-0 -z-10 overflow-hidden">
+          <div className="absolute top-1/4 -left-48 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute top-1/3 -right-48 w-96 h-96 bg-primary/3 rounded-full blur-3xl animate-pulse [animation-delay:2s]" />
+        </div>
         <div className="container mx-auto max-w-5xl">
           <div className="text-center space-y-8">
             <Badge
@@ -78,7 +88,7 @@ export default function HomePage() {
               Building products
               <br />
               that{' '}
-              <span className="text-primary bg-gradient-to-r from-primary to-foreground/80 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-primary to-foreground/80 bg-clip-text text-transparent">
                 scale
               </span>
             </h1>
@@ -97,7 +107,7 @@ export default function HomePage() {
               <Button
                 variant="outline"
                 size="lg"
-                className="px-8 h-12 text-base"
+                className="px-8 h-12 text-base hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
                 asChild
               >
                 <a href="#work">View Our Work</a>
@@ -205,7 +215,8 @@ export default function HomePage() {
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-muted-foreground hover:text-foreground transition-colors"
+                        className="p-1.5 rounded-lg bg-primary/5 text-primary hover:bg-primary hover:text-primary-foreground transition-all hover:scale-110"
+                        aria-label={`Visit ${project.name}`}
                       >
                         <ExternalLink className="w-4 h-4" />
                       </a>
@@ -264,17 +275,25 @@ export default function HomePage() {
               { Icon: TechIcons.TypeScript, name: 'TypeScript' },
               { Icon: TechIcons.TailwindCSS, name: 'Tailwind' },
               { Icon: TechIcons.NodeJS, name: 'Node.js' },
+              { Icon: TechIcons.Vue, name: 'Vue.js' },
+              { Icon: TechIcons.Nuxt, name: 'Nuxt.js' },
               { Icon: TechIcons.PostgreSQL, name: 'PostgreSQL' },
+              { Icon: TechIcons.MySQL, name: 'MySQL' },
               { Icon: TechIcons.MongoDB, name: 'MongoDB' },
               { Icon: TechIcons.SQLite, name: 'SQLite' },
               { Icon: TechIcons.Redis, name: 'Redis' },
               { Icon: TechIcons.Prisma, name: 'Prisma' },
               { Icon: TechIcons.Drizzle, name: 'Drizzle' },
+              { Icon: TechIcons.PayloadCMS, name: 'Payload' },
               { Icon: TechIcons.AWS, name: 'AWS' },
               { Icon: TechIcons.Vercel, name: 'Vercel' },
+              { Icon: TechIcons.Cloudflare, name: 'Cloudflare' },
               { Icon: TechIcons.Docker, name: 'Docker' },
               { Icon: TechIcons.GitHub, name: 'GitHub' },
+              { Icon: TechIcons.Linux, name: 'Linux' },
+              { Icon: TechIcons.macOS, name: 'macOS' },
               { Icon: TechIcons.Go, name: 'Go' },
+              { Icon: TechIcons.Rust, name: 'Rust' },
             ].map(({ Icon, name }, i) => (
               <div
                 key={i}
@@ -293,44 +312,69 @@ export default function HomePage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-24 px-6 lg:px-8">
+      <section className="py-24 px-6 lg:px-8 relative overflow-hidden">
         <div className="container mx-auto max-w-5xl">
-          <div className="grid md:grid-cols-3 gap-12 text-center">
-            <div className="space-y-3">
-              <h3 className="text-5xl font-bold text-foreground">500+</h3>
-              <p className="text-sm text-muted-foreground uppercase tracking-wider">
-                Projects Delivered
-              </p>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="relative group">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="relative p-8 text-center space-y-3">
+                <h3 className="text-5xl md:text-6xl font-bold bg-gradient-to-br from-foreground to-foreground/60 bg-clip-text text-transparent">
+                  500+
+                </h3>
+                <p className="text-sm text-muted-foreground uppercase tracking-wider font-medium">
+                  Projects Delivered
+                </p>
+              </div>
             </div>
-            <div className="space-y-3">
-              <h3 className="text-5xl font-bold text-foreground">98%</h3>
-              <p className="text-sm text-muted-foreground uppercase tracking-wider">
-                Client Satisfaction
-              </p>
+            <div className="relative group">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="relative p-8 text-center space-y-3">
+                <h3 className="text-5xl md:text-6xl font-bold bg-gradient-to-br from-foreground to-foreground/60 bg-clip-text text-transparent">
+                  98%
+                </h3>
+                <p className="text-sm text-muted-foreground uppercase tracking-wider font-medium">
+                  Client Satisfaction
+                </p>
+              </div>
             </div>
-            <div className="space-y-3">
-              <h3 className="text-5xl font-bold text-foreground">5+</h3>
-              <p className="text-sm text-muted-foreground uppercase tracking-wider">
-                Years Experience
-              </p>
+            <div className="relative group">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="relative p-8 text-center space-y-3">
+                <h3 className="text-5xl md:text-6xl font-bold bg-gradient-to-br from-foreground to-foreground/60 bg-clip-text text-transparent">
+                  5+
+                </h3>
+                <p className="text-sm text-muted-foreground uppercase tracking-wider font-medium">
+                  Years Experience
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 px-6 lg:px-8 bg-primary">
-        <div className="container mx-auto max-w-4xl text-center space-y-8">
-          <h2 className="text-3xl md:text-5xl font-bold text-primary-foreground tracking-tight">
-            Ready to build something great?
-          </h2>
-          <p className="text-lg text-primary-foreground/90 max-w-2xl mx-auto">
-            Let's discuss your project and turn your vision into reality
-          </p>
-          <Button size="lg" variant="secondary" className="px-8 h-12 text-base">
-            Get In Touch
-            <ArrowRight className="ml-2 w-4 h-4" />
-          </Button>
+      <section className="py-24 px-6 lg:px-8 relative overflow-hidden">
+        <div className="container mx-auto max-w-4xl">
+          <Card className="border-border/50 bg-card/50 backdrop-blur-sm relative overflow-hidden">
+            {/* Subtle gradient accent */}
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/3 pointer-events-none" />
+            <div className="relative px-8 py-16 md:px-16 md:py-20 text-center space-y-8">
+              <div className="space-y-4">
+                <h2 className="text-3xl md:text-5xl font-bold text-foreground tracking-tight">
+                  Ready to build something great?
+                </h2>
+                <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                  Let's discuss your project and turn your vision into reality
+                </p>
+              </div>
+              <Button size="lg" className="px-8 h-12 text-base" asChild>
+                <a href="#contact">
+                  Get In Touch
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </a>
+              </Button>
+            </div>
+          </Card>
         </div>
       </section>
 
@@ -346,38 +390,53 @@ export default function HomePage() {
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
-            <Card className="border-border/50 bg-card text-center">
-              <CardHeader className="space-y-3">
-                <CardTitle className="text-lg">Email</CardTitle>
-                <CardDescription>
-                  <a
-                    href={`mailto:${contactInfo.email}`}
-                    className="hover:text-foreground transition-colors font-medium"
-                  >
-                    {contactInfo.email}
-                  </a>
-                </CardDescription>
+            <Card className="border-border/50 bg-card hover:border-border transition-all hover:shadow-lg group">
+              <CardHeader className="space-y-4 text-center">
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto group-hover:bg-primary/20 transition-colors">
+                  <Mail className="w-6 h-6 text-primary" />
+                </div>
+                <div className="space-y-2">
+                  <CardTitle className="text-lg">Email</CardTitle>
+                  <CardDescription>
+                    <a
+                      href={`mailto:${contactInfo.email}`}
+                      className="hover:text-foreground transition-colors font-medium"
+                    >
+                      {contactInfo.email}
+                    </a>
+                  </CardDescription>
+                </div>
               </CardHeader>
             </Card>
-            <Card className="border-border/50 bg-card text-center">
-              <CardHeader className="space-y-3">
-                <CardTitle className="text-lg">Phone</CardTitle>
-                <CardDescription>
-                  <a
-                    href={contactInfo.phoneHref}
-                    className="hover:text-foreground transition-colors font-medium"
-                  >
-                    {contactInfo.phone}
-                  </a>
-                </CardDescription>
+            <Card className="border-border/50 bg-card hover:border-border transition-all hover:shadow-lg group">
+              <CardHeader className="space-y-4 text-center">
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto group-hover:bg-primary/20 transition-colors">
+                  <Phone className="w-6 h-6 text-primary" />
+                </div>
+                <div className="space-y-2">
+                  <CardTitle className="text-lg">Phone</CardTitle>
+                  <CardDescription>
+                    <a
+                      href={contactInfo.phoneHref}
+                      className="hover:text-foreground transition-colors font-medium"
+                    >
+                      {contactInfo.phone}
+                    </a>
+                  </CardDescription>
+                </div>
               </CardHeader>
             </Card>
-            <Card className="border-border/50 bg-card text-center">
-              <CardHeader className="space-y-3">
-                <CardTitle className="text-lg">Location</CardTitle>
-                <CardDescription className="font-medium">
-                  {contactInfo.location}
-                </CardDescription>
+            <Card className="border-border/50 bg-card hover:border-border transition-all hover:shadow-lg group">
+              <CardHeader className="space-y-4 text-center">
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto group-hover:bg-primary/20 transition-colors">
+                  <MapPin className="w-6 h-6 text-primary" />
+                </div>
+                <div className="space-y-2">
+                  <CardTitle className="text-lg">Location</CardTitle>
+                  <CardDescription className="font-medium">
+                    {contactInfo.location}
+                  </CardDescription>
+                </div>
               </CardHeader>
             </Card>
           </div>
@@ -385,20 +444,77 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-border/40 py-12 px-6 lg:px-8">
+      <footer className="border-t border-border/40 py-16 px-6 lg:px-8 bg-muted/20">
         <div className="container mx-auto max-w-6xl">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="flex items-center gap-3">
-              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                <Code className="w-4 h-4 text-primary-foreground" />
+          <div className="flex flex-col gap-8">
+            {/* Top section */}
+            <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center shadow-sm">
+                  <Code className="w-5 h-5 text-primary-foreground" />
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-base font-semibold text-foreground">
+                    {contactInfo.company.legalName}
+                  </span>
+                  <span className="text-xs text-muted-foreground">
+                    {contactInfo.company.tagline}
+                  </span>
+                </div>
               </div>
-              <span className="text-sm font-semibold text-foreground">
-                {contactInfo.company.legalName}
-              </span>
+
+              {/* Social Links */}
+              <div className="flex items-center gap-3">
+                <a
+                  href={socialLinks.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 rounded-lg bg-card border border-border/50 hover:border-border hover:bg-primary hover:text-primary-foreground transition-all hover:scale-110"
+                  aria-label="GitHub"
+                >
+                  <Github className="w-5 h-5" />
+                </a>
+                <a
+                  href={socialLinks.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 rounded-lg bg-card border border-border/50 hover:border-border hover:bg-primary hover:text-primary-foreground transition-all hover:scale-110"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin className="w-5 h-5" />
+                </a>
+              </div>
             </div>
-            <p className="text-sm text-muted-foreground">
-              © 2025 {contactInfo.company.legalName}. All rights reserved.
-            </p>
+
+            {/* Divider */}
+            <div className="border-t border-border/40" />
+
+            {/* Bottom section */}
+            <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
+              <p>
+                © 2025 {contactInfo.company.legalName}. All rights reserved.
+              </p>
+              <div className="flex items-center gap-6">
+                <a
+                  href="#services"
+                  className="hover:text-foreground transition-colors"
+                >
+                  Services
+                </a>
+                <a
+                  href="#work"
+                  className="hover:text-foreground transition-colors"
+                >
+                  Work
+                </a>
+                <a
+                  href="#contact"
+                  className="hover:text-foreground transition-colors"
+                >
+                  Contact
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </footer>
